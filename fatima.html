@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Assignment Work</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff7fc;
+    color:#33243b;
+}
+
+/* NAVBAR */
+nav{
+    background:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(100,40,100,.10);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#a83282;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#49374d;
+    padding:10px 13px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    background:#f5ddf0;
+    color:#a83282;
+}
+
+/* HERO */
+.hero{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    padding:70px 50px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ffe1f2,#e8ddff);
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#9d327e;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#66566c;
+    line-height:1.7;
+    max-width:700px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin:20px 6px 0;
+    padding:13px 22px;
+    background:#9d327e;
+    color:white;
+    text-decoration:none;
+    border:none;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#762360;
+}
+
+/* SECTIONS */
+section{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+.title{
+    text-align:center;
+    font-size:35px;
+    color:#8e2e78;
+    margin-bottom:25px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    border:1px solid #efd9eb;
+    box-shadow:0 10px 30px rgba(100,50,100,.08);
+}
+
+.card h3{
+    color:#8e2e78;
+    margin-bottom:12px;
+    font-size:23px;
+}
+
+.card p{
+    color:#6e6070;
+    line-height:1.7;
+}
+
+.price{
+    font-size:34px;
+    color:#a83282;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+/* FORMS */
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(100,50,100,.08);
+}
+
+label{
+    display:block;
+    margin-top:17px;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #dcc8da;
+    border-radius:10px;
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+/* NOTICE */
+.notice{
+    background:#fff0f7;
+    border:1px solid #efcce1;
+    padding:17px;
+    border-radius:14px;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* REVIEWS */
+.review{
+    min-height:170px;
+}
+
+.demo{
+    color:#a83282;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+/* FOOTER */
+footer{
+    background:#30243a;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:70px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        justify-content:center;
+    }
+
+    .hero{
+        padding:45px 20px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        width:92%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+<div class="logo">
+Assignment Work
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#deposit">Deposit</a></li>
+<li><a href="#withdrawal">Withdrawal</a></li>
+<li><a href="#submit">Submit Work</a></li>
+<li><a href="#today">Today Work</a></li>
+<li><a href="#plans">Plans</a></li>
+</ul>
+
+</nav>
+
+
+<!-- HOME -->
+<div class="hero" id="home">
+
+<h1>Assignment Work</h1>
+
+<p>
+Work, submit your assignments and manage your account
+from one simple and beautiful dashboard.
+</p>
+
+<a href="#today" class="btn">View Today Work</a>
+
+<a href="#plans" class="btn">View Plans</a>
+
+</div>
+
+
+<!-- QUICK OPTIONS -->
+<section>
+
+<h2 class="title">Quick Options</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💳 Deposit</h3>
+<p>
+Add your payment information and upload screenshot proof.
+</p>
+<a href="#deposit" class="btn">Open Deposit</a>
+</div>
+
+<div class="card">
+<h3>📤 Submit Work</h3>
+<p>
+Submit your assignment work and screenshot/file.
+</p>
+<a href="#submit" class="btn">Submit Work</a>
+</div>
+
+<div class="card">
+<h3>💰 Withdrawal</h3>
+<p>
+Enter your account details and submit a withdrawal request.
+</p>
+<a href="#withdrawal" class="btn">Withdraw</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLANS -->
+<section id="plans">
+
+<h2 class="title">Plan Packages</h2>
+
+<div class="notice">
+The earning figures below are example package settings for this
+website demo and are not a guarantee of income or returns.
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Package 01</h3>
+
+<div class="price">PKR 300</div>
+
+<p>
+Daily earning shown: <b>PKR 30</b><br>
+Renewal: 30 Days<br>
+Access: 1 Page
+</p>
+
+<a href="#deposit" class="btn">
+Choose Plan
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Package 02</h3>
+
+<div class="price">PKR 600</div>
+
+<p>
+Daily earning shown: <b>PKR 70</b><br>
+Renewal: 30 Days<br>
+Access: 2 Pages
+</p>
+
+<a href="#deposit" class="btn">
+Choose Plan
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Package 03</h3>
+
+<div class="price">PKR 1,000</div>
+
+<p>
+Daily earning shown: <b>PKR 100</b><br>
+Renewal: 30 Days<br>
+Access: 3 Pages
+</p>
+
+<a href="#deposit" class="btn">
+Choose Plan
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TODAY WORK -->
+<section id="today">
+
+<h2 class="title">Today Work</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Task 01</h3>
+
+<p>
+Design a simple social media post.
+</p>
+
+<a href="#submit" class="btn">
+Submit
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Task 02</h3>
+
+<p>
+Write a short product description.
+</p>
+
+<a href="#submit" class="btn">
+Submit
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Task 03</h3>
+
+<p>
+Create a basic promotional banner.
+</p>
+
+<a href="#submit" class="btn">
+Submit
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DEPOSIT -->
+<section id="deposit">
+
+<h2 class="title">Deposit</h2>
+
+<div class="form-box">
+
+<div class="notice">
+
+<b>Easypaisa</b><br><br>
+
+Account Number:
+<b>03162858618</b>
+
+<br><br>
+
+Please verify payment details before sending money.
+
+</div>
+
+
+<label>Select Package</label>
+
+<select>
+
+<option>Package 01 — PKR 300</option>
+
+<option>Package 02 — PKR 600</option>
+
+<option>Package 03 — PKR 1,000</option>
+
+</select>
+
+
+<label>Transaction ID / TRX ID</label>
+
+<input
+type="text"
+placeholder="Enter your TRX ID"
+>
+
+
+<label>Screenshot Proof</label>
+
+<input
+type="file"
+accept="image/*"
+>
+
+
+<label>Additional Note</label>
+
+<textarea
+rows="4"
+placeholder="Optional message"
+></textarea>
+
+
+<button
+class="btn"
+onclick="alert('Demo: Deposit proof submitted successfully!')">
+
+Submit Deposit Proof
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SUBMIT WORK -->
+<section id="submit">
+
+<h2 class="title">Submit Work</h2>
+
+<div class="form-box">
+
+<label>Assignment / Task</label>
+
+<select>
+
+<option>Task 01</option>
+
+<option>Task 02</option>
+
+<option>Task 03</option>
+
+</select>
+
+
+<label>Your Name</label>
+
+<input
+type="text"
+placeholder="Enter your name"
+>
+
+
+<label>Work File / Screenshot</label>
+
+<input
+type="file"
+>
+
+
+<label>Comment</label>
+
+<textarea
+rows="5"
+placeholder="Write your submission note"
+></textarea>
+
+
+<button
+class="btn"
+onclick="alert('Demo: Assignment submitted successfully!')">
+
+Submit Assignment
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- WITHDRAWAL -->
+<section id="withdrawal">
+
+<h2 class="title">Withdrawal</h2>
+
+<div class="form-box">
+
+<div class="notice">
+
+Withdrawal requests can be processed within 24 hours
+only where the actual service can support that timeframe.
+
+</div>
+
+
+<label>Account Number</label>
+
+<input
+type="text"
+placeholder="Enter account number"
+>
+
+
+<label>Account Name</label>
+
+<input
+type="text"
+placeholder="Enter account holder name"
+>
+
+
+<label>Withdrawal Amount</label>
+
+<input
+type="number"
+placeholder="Enter amount"
+>
+
+
+<button
+class="btn"
+onclick="alert('Demo: Withdrawal request submitted!')">
+
+Request Withdrawal
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section>
+
+<h2 class="title">Reviews</h2>
+
+<div class="notice">
+
+⚠️ These are sample/demo reviews for the website design.
+Replace them with genuine customer reviews before publishing.
+
+</div>
+
+
+<div class="cards">
+
+<div class="card review">
+
+<span class="demo">
+Demo Review
+</span>
+
+<h3>“Easy Dashboard”</h3>
+
+<p>
+The layout is simple and easy to understand.
+</p>
+
+<br>
+
+<b>— Demo User</b>
+
+</div>
+
+
+<div class="card review">
+
+<span class="demo">
+Demo Review
+</span>
+
+<h3>“Clean Design”</h3>
+
+<p>
+I like the clean cards and clear navigation.
+</p>
+
+<br>
+
+<b>— Demo User</b>
+
+</div>
+
+
+<div class="card review">
+
+<span class="demo">
+Demo Review
+</span>
+
+<h3>“Simple Process”</h3>
+
+<p>
+The submission section is straightforward.
+</p>
+
+<br>
+
+<b>— Demo User</b>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Assignment Work | All Rights Reserved
+</p>
+
+</footer>
+
+
+</body>
+</html>
